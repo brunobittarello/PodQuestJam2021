@@ -1,22 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectNeedsItemBehaviour : MonoBehaviour
+public class DoorWithKeyBehaviour : BaseObjectBehaviour
 {
     public ParticleSystem funfair;
     public Collider2D collider2d;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {

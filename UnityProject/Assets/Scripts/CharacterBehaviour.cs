@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class CharacterBehaviour : MonoBehaviour
 {
-    const float SPEED = 3;
+    const float SPEED = 2.5f;
+    const float ANIMATION_SPEED = 0.25f;
 
     public static CharacterBehaviour instance;
 
     bool isChangingChannel;
-    InstableObjectBehaviour target;
+    ObjectSwitcherBehaviour target;
     public bool hasItem;
+    public Sprite[] sprites;
+
+    SpriteRenderer sprRenderer;
+    Vector2Int lastMovement;
+    float animationTimer;
+    int movingSpriteIndex;
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
+        sprRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        lastMovement = Vector2Int.up;
     }
 
     // Update is called once per frame
@@ -73,7 +82,10 @@ public class CharacterBehaviour : MonoBehaviour
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             movement += Vector2Int.down;
 
+
         Move(movement);
+        Animate(movement);
+        lastMovement = movement;
 
         if (Input.GetKeyDown(KeyCode.Space))
             TryToChangeChannel();
@@ -84,6 +96,68 @@ public class CharacterBehaviour : MonoBehaviour
         this.transform.position = this.transform.position + (Vector3)deltaMovement * Time.deltaTime * SPEED;
     }
 
+    void Animate(Vector2Int deltaMovement)
+    {
+        if (deltaMovement != Vector2Int.zero) {
+            Debug.Log(animationTimer);
+            animationTimer += Time.deltaTime;
+            if (animationTimer > ANIMATION_SPEED)
+            {
+                sprRenderer.sprite = GetMovingSprite(deltaMovement);
+                animationTimer = 0;
+            }
+            return;
+        }
+        else if (lastMovement == Vector2Int.zero)
+            return;
+
+        sprRenderer.sprite = GetIdleSprite(lastMovement);
+        animationTimer = ANIMATION_SPEED;
+    }
+
+    Sprite GetMovingSprite(Vector2Int direction)
+    {
+        sprRenderer.flipX = false;
+        movingSpriteIndex++;
+        if (movingSpriteIndex == 4)
+            movingSpriteIndex = 0;
+
+        if (direction.y > 0)
+            return GetMovingSprite(0);
+        if (direction.y < 0)
+            return GetMovingSprite(1);
+
+        if (direction.x > 0)
+            sprRenderer.flipX = true;
+
+        return GetMovingSprite(2);
+    }
+
+    Sprite GetMovingSprite(int offset)
+    {
+        switch (movingSpriteIndex)
+        {
+            case 0:
+            case 2: return sprites[0 + offset];
+            case 1: return sprites[3 + offset * 2];
+            case 3: return sprites[4 + offset * 2];
+        }
+        return null;
+    }
+
+    Sprite GetIdleSprite(Vector2Int direction)
+    {
+        sprRenderer.flipX = false;
+        if (direction.y > 0)
+            return sprites[0];
+        if (direction.y < 0)
+            return sprites[1];
+        if (direction.x > 0)
+            sprRenderer.flipX = true;
+
+        return sprites[2];
+    }
+
     void TryToChangeChannel()
     {
         Debug.Log("Trying...");
@@ -92,7 +166,7 @@ public class CharacterBehaviour : MonoBehaviour
             return;
 
         Debug.Log("HIT " + hit.collider.name);
-        target =  hit.collider.GetComponent<InstableObjectBehaviour>();
+        target = hit.collider.GetComponent<ObjectSwitcherBehaviour>();
         if (target == null)
             return;
 

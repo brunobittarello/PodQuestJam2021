@@ -98,6 +98,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasItem: 0
+  sprites:
+  - {fileID: 6083036481822288271, guid: 0fd1f4e2dd6d22e4ebf7430fd2c2b468, type: 3}
+  - {fileID: -6593517711273507270, guid: 0fd1f4e2dd6d22e4ebf7430fd2c2b468, type: 3}
+  - {fileID: 4194472963590098618, guid: 0fd1f4e2dd6d22e4ebf7430fd2c2b468, type: 3}
+  - {fileID: -2277239701489463349, guid: 0fd1f4e2dd6d22e4ebf7430fd2c2b468, type: 3}
+  - {fileID: -5181385256574998858, guid: 0fd1f4e2dd6d22e4ebf7430fd2c2b468, type: 3}
+  - {fileID: 1290458282175756924, guid: 0fd1f4e2dd6d22e4ebf7430fd2c2b468, type: 3}
+  - {fileID: 7122570354007994295, guid: 0fd1f4e2dd6d22e4ebf7430fd2c2b468, type: 3}
+  - {fileID: 7713789375373852609, guid: 0fd1f4e2dd6d22e4ebf7430fd2c2b468, type: 3}
+  - {fileID: 1007747442346321454, guid: 0fd1f4e2dd6d22e4ebf7430fd2c2b468, type: 3}
 --- !u!58 &7174992091183770207
 CircleCollider2D:
   m_ObjectHideFlags: 0
