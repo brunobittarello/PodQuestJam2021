@@ -25,9 +25,9 @@ public class DrawerBehaviour : BaseObjectBehaviour
         itemIsGone = true;
         character.hasItem = true;
         var item = GameObject.Instantiate(collectable, character.transform);
-        item.transform.position = this.transform.position;
-        item.transform.position = this.transform.position;
+        item.transform.position = this.transform.position;//TODO melhorar isso
         item.Show();
+
         collider2d.enabled = false;
         if (funfair != null)
             funfair.Play();

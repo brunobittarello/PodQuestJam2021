@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterBehaviour : MonoBehaviour
 {
     const float SPEED = 2.5f;
-    const float ANIMATION_SPEED = 0.25f;
+    const float ANIMATION_SPEED = 0.2f;
 
     public static CharacterBehaviour instance;
 
@@ -99,7 +99,6 @@ public class CharacterBehaviour : MonoBehaviour
     void Animate(Vector2Int deltaMovement)
     {
         if (deltaMovement != Vector2Int.zero) {
-            Debug.Log(animationTimer);
             animationTimer += Time.deltaTime;
             if (animationTimer > ANIMATION_SPEED)
             {
