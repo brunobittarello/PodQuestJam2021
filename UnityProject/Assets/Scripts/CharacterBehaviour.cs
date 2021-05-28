@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterBehaviour : MonoBehaviour
@@ -12,6 +10,9 @@ public class CharacterBehaviour : MonoBehaviour
     bool isChangingChannel;
     ObjectSwitcherBehaviour target;
     public bool hasItem;
+
+    public bool CanBreak = false;
+
     public Sprite[] sprites;
 
     SpriteRenderer sprRenderer;
@@ -19,8 +20,9 @@ public class CharacterBehaviour : MonoBehaviour
     float animationTimer;
     int movingSpriteIndex;
 
+
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         instance = this;
         sprRenderer = this.gameObject.GetComponent<SpriteRenderer>();
@@ -114,7 +116,7 @@ public class CharacterBehaviour : MonoBehaviour
         animationTimer = ANIMATION_SPEED;
     }
 
-    Sprite GetMovingSprite(Vector2Int direction)
+    protected virtual Sprite GetMovingSprite(Vector2Int direction)
     {
         sprRenderer.flipX = false;
         movingSpriteIndex++;
@@ -144,7 +146,7 @@ public class CharacterBehaviour : MonoBehaviour
         return null;
     }
 
-    Sprite GetIdleSprite(Vector2Int direction)
+    protected virtual Sprite GetIdleSprite(Vector2Int direction)
     {
         sprRenderer.flipX = false;
         if (direction.y > 0)

@@ -21,7 +21,7 @@ public class ObjectSwitcherTutorialBehaviour : ObjectSwitcherBehaviour
     protected override void LoadChannel()
     {
         base.LoadChannel();
-        if (isRight)
+        if (isRight && funfair != null)
             funfair.Play();
     }
 }
