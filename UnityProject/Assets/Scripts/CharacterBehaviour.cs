@@ -14,11 +14,14 @@ public class CharacterBehaviour : MonoBehaviour
     public bool CanBreak = false;
 
     public Sprite[] sprites;
+    public InfraredRayEffect infrared;
 
     SpriteRenderer sprRenderer;
     Vector2Int lastMovement;
+    Vector2Int direction;
     float animationTimer;
     int movingSpriteIndex;
+    Vector3 hitpoint;
 
 
     // Start is called before the first frame update
@@ -26,7 +29,7 @@ public class CharacterBehaviour : MonoBehaviour
     {
         instance = this;
         sprRenderer = this.gameObject.GetComponent<SpriteRenderer>();
-        lastMovement = Vector2Int.up;
+        direction = lastMovement = Vector2Int.up;
     }
 
     // Update is called once per frame
@@ -41,8 +44,10 @@ public class CharacterBehaviour : MonoBehaviour
     void ChangeChannel()
     {
         var channel = GetValidChannelInput();
+
         if (channel == 0)
             return;
+        ShowInfraredRay();
 
         var isDone = false;
         if (channel > 0)
@@ -51,10 +56,7 @@ public class CharacterBehaviour : MonoBehaviour
             isDone = true;
 
         if (isDone)
-        {
-            target = null;
-            isChangingChannel = false;
-        }
+            ClearTarget();
     }
 
     int GetValidChannelInput()
@@ -101,6 +103,7 @@ public class CharacterBehaviour : MonoBehaviour
     void Animate(Vector2Int deltaMovement)
     {
         if (deltaMovement != Vector2Int.zero) {
+            direction = deltaMovement;
             animationTimer += Time.deltaTime;
             if (animationTimer > ANIMATION_SPEED)
             {
@@ -162,7 +165,7 @@ public class CharacterBehaviour : MonoBehaviour
     void TryToChangeChannel()
     {
         Debug.Log("Trying...");
-        var hit = Physics2D.Raycast(this.transform.position, Vector2.up, float.PositiveInfinity, LayerMask.GetMask("RemoteControl"));
+        var hit = Physics2D.Raycast(this.transform.position, direction, float.PositiveInfinity, LayerMask.GetMask("RemoteControl"));
         if (hit.collider == null)
             return;
 
@@ -172,6 +175,21 @@ public class CharacterBehaviour : MonoBehaviour
             return;
 
         Debug.Log("object found!");
+        target.PlayerTargetStart();
+        hitpoint = hit.point;
+        ShowInfraredRay();
         isChangingChannel = true;
+    }
+
+    void ClearTarget()
+    {
+        target.PlayerTargetExit();
+        target = null;
+        isChangingChannel = false;
+    }
+
+    void ShowInfraredRay()
+    {
+        infrared.Show(this.transform.position, hitpoint);
     }
 }

@@ -1,20 +1,37 @@
 using UnityEngine;
 
-public class DoorWithMusicalCodeBehaviour : BaseObjectBehaviour, IRemoteControlable
+public class DoorWithMusicalCodeBehaviour : BaseObjectBehaviour, IRemoteControlable, IDoor
 {
     public ParticleSystem funfair;
     public Collider2D remoteCollider2d;
     public Collider2D collider2d;
     public Sprite openDoorSprite;
     public PopUpBehaviour popup;
+    public SpriteRenderer outline;
 
     public int[] code;
     int[] inputCode;
     int inputCodeIndex;
+    bool isOpened;
 
     void Awake()
     {
         inputCode = new int[code.Length];
+    }
+
+    public void PlayerTargetStart()
+    {
+        outline.enabled = true;
+    }
+
+    public void PlayerTargetExit()
+    {
+        outline.enabled = false;
+    }
+
+    public bool IsOpened()
+    {
+        return isOpened;
     }
 
     public bool ChangeChannel(int channel)
@@ -62,6 +79,7 @@ public class DoorWithMusicalCodeBehaviour : BaseObjectBehaviour, IRemoteControla
         this.gameObject.GetComponent<SpriteRenderer>().sprite = openDoorSprite;
         remoteCollider2d.enabled = false;
         collider2d.enabled = false;
+        isOpened = true;
 
         if (funfair)
             funfair.Play();

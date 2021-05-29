@@ -1,0 +1,4 @@
+﻿interface IDoor
+{
+    bool IsOpened();
+}

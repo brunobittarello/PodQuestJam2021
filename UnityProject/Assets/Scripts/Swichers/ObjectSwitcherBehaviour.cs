@@ -6,6 +6,7 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
 
     public BaseObjectBehaviour[] objectChannels;
     public int startChannel;
+    public SpriteRenderer outline;
 
     protected SpriteRenderer sprRenderer;
     protected Collider2D collider2d;
@@ -13,6 +14,7 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
     BaseObjectBehaviour current;
     int currentChannel;
     float timer;
+    bool enableProxy;
 
     void Start()
     {
@@ -39,11 +41,31 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
         LoadChannel();
     }
 
+    public void PlayerTargetStart()
+    {
+        outline.enabled = true;
+        if (current is IRemoteControlable remoteControlable)
+        {
+            remoteControlable.PlayerTargetStart();
+            enableProxy = true;
+        }
+    }
+
+    public void PlayerTargetExit()
+    {
+        outline.enabled = false;
+        enableProxy = false;
+        if (current is IRemoteControlable remoteControlable)
+            remoteControlable.PlayerTargetExit();
+        if (current is IDoor door)
+            collider2d.enabled = !door.IsOpened();
+    }
+
     public virtual bool ChangeChannel(int channel)
     {
         if (timer > 0) return false;
 
-        if (current is IRemoteControlable remoteControlable)
+        if (enableProxy && current is IRemoteControlable remoteControlable)
             return remoteControlable.ChangeChannel(channel);
 
         currentChannel = channel;
