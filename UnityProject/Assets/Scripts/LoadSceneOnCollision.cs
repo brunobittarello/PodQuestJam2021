@@ -15,6 +15,4 @@ public class LoadSceneOnCollision : MonoBehaviour
             SceneManager.LoadScene(SceneName);
         }
     }
-
-
 }

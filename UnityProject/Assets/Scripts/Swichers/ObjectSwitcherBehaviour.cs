@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectSwitcherBehaviour : MonoBehaviour
+public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
 {
     const float SYNC_TIME = 0.25f;
 
@@ -44,6 +42,9 @@ public class ObjectSwitcherBehaviour : MonoBehaviour
     public virtual bool ChangeChannel(int channel)
     {
         if (timer > 0) return false;
+
+        if (current is IRemoteControlable remoteControlable)
+            return remoteControlable.ChangeChannel(channel);
 
         currentChannel = channel;
         sprRenderer.enabled = true;

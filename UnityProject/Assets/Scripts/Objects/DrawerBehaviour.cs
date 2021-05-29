@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DrawerBehaviour : BaseObjectBehaviour
 {
-    public CollectableBehaviour collectable;
+    public PopUpBehaviour collectable;
     public ParticleSystem funfair;
     public Collider2D collider2d;
 

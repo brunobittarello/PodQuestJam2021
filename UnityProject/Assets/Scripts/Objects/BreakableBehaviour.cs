@@ -18,22 +18,26 @@ public class BreakableBehaviour : PropObjectBehaviour
         CharacterBehaviour character = collision.gameObject.GetComponent<CharacterBehaviour>();
 
         if (character != null && character.CanBreak)
-        {
-            m_Collider.enabled = false;
             MakeTransparent();
-            if (funfair != null)
-            {
-                funfair.Play();
-            }
-        }
 
+        var car = collision.gameObject.GetComponent<RunStraightBehaviour>();
+
+        if (car != null)
+        {
+            MakeTransparent();
+            car.DestroyObject();
+        }
     }
 
     private void MakeTransparent()
     {
+        m_Collider.enabled = false;
         Color color = m_Renderer.color;
         Color newColor = new Color(color.r, color.g, color.b, 0f);
         m_Renderer.color = newColor;
+
+        if (funfair != null)
+            funfair.Play();
     }
 
 }

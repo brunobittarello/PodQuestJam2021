@@ -1,0 +1,4 @@
+﻿interface IInterrupter
+{
+    void TurnOn();
+}

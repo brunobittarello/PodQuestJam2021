@@ -1,10 +1,11 @@
 using UnityEngine;
 
-public class DoorWithKeyBehaviour : BaseObjectBehaviour
+public class DoorWithKeyBehaviour : BaseObjectBehaviour, IDestructible
 {
     public ParticleSystem funfair;
     public Collider2D collider2d;
     public Sprite openDoorSprite;
+    public PopUpBehaviour popupItem;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -19,13 +20,16 @@ public class DoorWithKeyBehaviour : BaseObjectBehaviour
 
     void DoTheThing(CharacterBehaviour character)
     {
-        var item = character.transform.GetChild(0).GetComponent<CollectableBehaviour>();
-        item.transform.position = this.transform.position;//TODO melhorar isso
-        item.Show();
+        popupItem.Show();
 
         this.gameObject.GetComponent<SpriteRenderer>().sprite = openDoorSprite;
         collider2d.enabled = false;
         if (funfair)
             funfair.Play();
+    }
+
+    public void DestroyObject()
+    {
+        GameObject.Destroy(this.transform.parent.gameObject);
     }
 }
