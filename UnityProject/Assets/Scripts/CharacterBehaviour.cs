@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterBehaviour : MonoBehaviour
 {
     const float SPEED = 2.5f;
     const float ANIMATION_SPEED = 0.2f;
+    internal const float INTRO_TIME = 0.5f;
 
     public static CharacterBehaviour instance;
 
@@ -17,11 +19,14 @@ public class CharacterBehaviour : MonoBehaviour
     public InfraredRayEffect infrared;
 
     SpriteRenderer sprRenderer;
+    Collider2D collider2d;
     Vector2Int lastMovement;
     Vector2Int direction;
     float animationTimer;
     int movingSpriteIndex;
     Vector3 hitpoint;
+    float timer;
+    bool isIntro;
 
 
     // Start is called before the first frame update
@@ -29,16 +34,44 @@ public class CharacterBehaviour : MonoBehaviour
     {
         instance = this;
         sprRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        collider2d = this.gameObject.GetComponent<Collider2D>();
         direction = lastMovement = Vector2Int.up;
+        StartIntro();
+    }
+
+    void StartIntro()
+    {
+        isIntro = true;
+        this.transform.position = new Vector2(4, -1);
+        collider2d.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Home))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        if (isIntro)
+        {
+            UpdateIntro();
+            return;
+        }
         if (isChangingChannel)
             ChangeChannel();
         else
             ReadInputs();
+    }
+
+    void UpdateIntro()
+    {
+        timer += Time.deltaTime;
+        Move(Vector2Int.up);
+        if (timer > INTRO_TIME)
+        {
+            isIntro = false;
+            collider2d.enabled = true;
+        }
     }
 
     void ChangeChannel()
@@ -86,18 +119,17 @@ public class CharacterBehaviour : MonoBehaviour
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             movement += Vector2Int.down;
 
-
         Move(movement);
-        Animate(movement);
-        lastMovement = movement;
 
         if (Input.GetKeyDown(KeyCode.Space))
             TryToChangeChannel();
     }
 
-    void Move(Vector2 deltaMovement)
+    void Move(Vector2Int deltaMovement)
     {
-        this.transform.position = this.transform.position + (Vector3)deltaMovement * Time.deltaTime * SPEED;
+        this.transform.position = this.transform.position + (Vector3)(Vector2)deltaMovement * Time.deltaTime * SPEED;
+        Animate(deltaMovement);
+        lastMovement = deltaMovement;
     }
 
     void Animate(Vector2Int deltaMovement)
