@@ -73,7 +73,7 @@ class RemoteControllerUIEffect : MonoBehaviour
 
     bool MoveTowards(Vector3 position)
     {
-        this.transform.position = Vector3.MoveTowards(this.transform.position, position, SPEED);
+        this.transform.position = Vector3.MoveTowards(this.transform.position, position, SPEED * Time.deltaTime);
         if (Vector3.SqrMagnitude(this.transform.position - position) < 0.2f)
         {
             this.transform.position = position;
