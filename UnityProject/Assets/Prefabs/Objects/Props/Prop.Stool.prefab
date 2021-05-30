@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2340351999884469271}
   - component: {fileID: 3894608461172838294}
   m_Layer: 0
-  m_Name: Stool
+  m_Name: Prop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

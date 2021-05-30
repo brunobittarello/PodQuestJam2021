@@ -8,10 +8,12 @@ public class CharacterBehaviour : MonoBehaviour
     internal const float INTRO_TIME = 0.5f;
 
     public static CharacterBehaviour instance;
+    public static bool HasAxe;
 
     bool isChangingChannel;
     IRemoteControlable target;
     public bool hasItem;
+    internal bool HasRemoteController;
 
     public bool CanBreak = false;
 
@@ -28,11 +30,11 @@ public class CharacterBehaviour : MonoBehaviour
     float timer;
     bool isIntro;
 
-
     // Start is called before the first frame update
     protected virtual void Start()
     {
         instance = this;
+        HasRemoteController = true;
         sprRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         collider2d = this.gameObject.GetComponent<Collider2D>();
         direction = lastMovement = Vector2Int.up;
@@ -51,6 +53,9 @@ public class CharacterBehaviour : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Home))
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        if (Input.GetKeyDown(KeyCode.End))
+            HasAxe = !HasAxe;
 
         if (isIntro)
         {
@@ -123,7 +128,7 @@ public class CharacterBehaviour : MonoBehaviour
 
         Move(movement);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (HasRemoteController && Input.GetKeyDown(KeyCode.Space))
             TryToChangeChannel();
     }
 
