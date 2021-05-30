@@ -80,7 +80,9 @@ public class CharacterBehaviour : MonoBehaviour
 
         if (channel == 0)
             return;
+
         ShowInfraredRay();
+        RemoteControllerUIEffect.instance?.ControllerButtonPressed(channel);
 
         var isDone = false;
         if (channel > 0)
@@ -209,12 +211,14 @@ public class CharacterBehaviour : MonoBehaviour
         Debug.Log("object found!");
         target.PlayerTargetStart();
         hitpoint = hit.point;
+        RemoteControllerUIEffect.instance?.Show();
         ShowInfraredRay();
         isChangingChannel = true;
     }
 
     void ClearTarget()
     {
+        RemoteControllerUIEffect.instance?.Hide();
         target.PlayerTargetExit();
         target = null;
         isChangingChannel = false;
