@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class ObjectSwitcherTutorialBehaviour : ObjectSwitcherBehaviour
 {
@@ -15,6 +16,7 @@ public class ObjectSwitcherTutorialBehaviour : ObjectSwitcherBehaviour
 
         if (isRight)
             collider2d.enabled = false;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ray/RayStatic", transform.position);
         return isRight;
     }
 
@@ -22,6 +24,9 @@ public class ObjectSwitcherTutorialBehaviour : ObjectSwitcherBehaviour
     {
         base.LoadChannel();
         if (isRight && funfair != null)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ray/RayFunfair", transform.position);
             funfair.Play();
+        }
     }
 }

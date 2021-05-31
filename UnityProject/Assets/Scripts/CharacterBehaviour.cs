@@ -118,14 +118,26 @@ public class CharacterBehaviour : MonoBehaviour
     {
         var movement = Vector2Int.zero;
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            movement += Vector2Int.left;
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Steps", transform.position);
+                movement += Vector2Int.left;
+            }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            movement += Vector2Int.right;
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Steps", transform.position);
+                movement += Vector2Int.right;
+            }
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-            movement += Vector2Int.up;
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Steps", transform.position);
+                movement += Vector2Int.up;
+            }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-            movement += Vector2Int.down;
-
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Steps", transform.position);
+                movement += Vector2Int.down;
+            }
+        
         Move(movement);
 
         if (HasRemoteController && Input.GetKeyDown(KeyCode.Space))
@@ -218,6 +230,7 @@ public class CharacterBehaviour : MonoBehaviour
         hitpoint = hit.point;
         RemoteControllerUIEffect.instance?.Show();
         ShowInfraredRay();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ray/RayEngage", transform.position);
         isChangingChannel = true;
     }
 
@@ -225,6 +238,7 @@ public class CharacterBehaviour : MonoBehaviour
     {
         RemoteControllerUIEffect.instance?.Hide();
         target.PlayerTargetExit();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ray/RayDisEngage", transform.position);
         target = null;
         isChangingChannel = false;
     }
