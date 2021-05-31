@@ -119,26 +119,14 @@ public class CharacterBehaviour : MonoBehaviour
     {
         var movement = Vector2Int.zero;
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            {
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Steps", transform.position);
-                movement += Vector2Int.left;
-            }
+            movement += Vector2Int.left;
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            {
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Steps", transform.position);
-                movement += Vector2Int.right;
-            }
+            movement += Vector2Int.right;
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-            {
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Steps", transform.position);
-                movement += Vector2Int.up;
-            }
+            movement += Vector2Int.up;
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-            {
-                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Steps", transform.position);
-                movement += Vector2Int.down;
-            }
-        
+            movement += Vector2Int.down;
+
         Move(movement);
 
         if (HasRemoteController && Input.GetKeyDown(KeyCode.Space))
@@ -154,7 +142,9 @@ public class CharacterBehaviour : MonoBehaviour
 
     void Animate(Vector2Int deltaMovement)
     {
-        if (deltaMovement != Vector2Int.zero) {
+        if (deltaMovement != Vector2Int.zero)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Character/Steps", transform.position);
             direction = deltaMovement;
             animationTimer += Time.deltaTime;
             if (animationTimer > ANIMATION_SPEED)
