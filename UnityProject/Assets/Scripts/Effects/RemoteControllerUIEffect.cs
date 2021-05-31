@@ -3,7 +3,7 @@ using UnityEngine;
 
 class RemoteControllerUIEffect : MonoBehaviour
 {
-    const float SPEED = 0.25f;
+    const float SPEED = 12f;
     const float HIDE_Y = -4.5f;
 
     static internal RemoteControllerUIEffect instance; 
@@ -74,7 +74,7 @@ class RemoteControllerUIEffect : MonoBehaviour
     bool MoveTowards(Vector3 position)
     {
         this.transform.position = Vector3.MoveTowards(this.transform.position, position, SPEED * Time.deltaTime);
-        if (Vector3.SqrMagnitude(this.transform.position - position) < 0.2f)
+        if (Vector3.SqrMagnitude(this.transform.position - position) < 0.1f)
         {
             this.transform.position = position;
             return true;

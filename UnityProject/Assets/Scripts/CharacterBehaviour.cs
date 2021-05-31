@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 public class CharacterBehaviour : MonoBehaviour
 {
     const float SPEED = 2.5f;
-    const float ANIMATION_SPEED = 0.2f;
+    const float ANIMATION_SPEED = 0.07f;
+    const int WALKING_NUM_SPRITES = 8;
     internal const float INTRO_TIME = 0.5f;
 
     public static CharacterBehaviour instance;
@@ -174,7 +175,7 @@ public class CharacterBehaviour : MonoBehaviour
     {
         sprRenderer.flipX = false;
         movingSpriteIndex++;
-        if (movingSpriteIndex == 4)
+        if (movingSpriteIndex == WALKING_NUM_SPRITES)
             movingSpriteIndex = 0;
 
         if (direction.y > 0)
@@ -190,14 +191,7 @@ public class CharacterBehaviour : MonoBehaviour
 
     Sprite GetMovingSprite(int offset)
     {
-        switch (movingSpriteIndex)
-        {
-            case 0:
-            case 2: return sprites[0 + offset];
-            case 1: return sprites[3 + offset * 2];
-            case 3: return sprites[4 + offset * 2];
-        }
-        return null;
+        return sprites[WALKING_NUM_SPRITES * offset + 3 + movingSpriteIndex];
     }
 
     protected virtual Sprite GetIdleSprite(Vector2Int direction)

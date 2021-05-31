@@ -11,7 +11,7 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
     protected SpriteRenderer sprRenderer;
     protected Collider2D collider2d;
 
-    BaseObjectBehaviour current;
+    internal BaseObjectBehaviour current;
     int currentChannel;
     float timer;
     bool enableProxy;
