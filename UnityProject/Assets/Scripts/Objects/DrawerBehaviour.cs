@@ -28,7 +28,6 @@ public class DrawerBehaviour : BaseObjectBehaviour
         item.transform.position = this.transform.position;//TODO melhorar isso
         item.Show();
 
-        collider2d.enabled = false;
         if (funfair != null)
             funfair.Play();
     }
