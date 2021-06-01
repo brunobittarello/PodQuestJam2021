@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DrawerBehaviour : BaseObjectBehaviour
+class DrawerBehaviour : TouchableObjectBehaviour
 {
     public PopUpBehaviour collectable;
     public ParticleSystem funfair;
@@ -8,20 +8,17 @@ public class DrawerBehaviour : BaseObjectBehaviour
 
     bool itemIsGone;
 
-    void OnCollisionEnter2D(Collision2D collision)
+    protected override Vector2 ReferencePosition() => this.transform.position;
+
+    protected override void OnPlayerContact(Vector2Int dir)
     {
-        Debug.Log("collision");
-        if (itemIsGone) return;
-
-        var character = collision.collider.GetComponent<CharacterBehaviour>();
-        if (character == null)
-            return;
-
-        DoTheThing(character);
+        if (!itemIsGone)
+            GiveItem();
     }
 
-    void DoTheThing(CharacterBehaviour character)
+    void GiveItem()
     {
+        var character = CharacterBehaviour.instance;
         itemIsGone = true;
         character.hasItem = true;
         var item = GameObject.Instantiate(collectable, character.transform);

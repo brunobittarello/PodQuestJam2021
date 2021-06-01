@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RunStraightBehaviour : BaseObjectBehaviour, IDestructible, IInterrupter
+class RunStraightBehaviour : TouchableObjectBehaviour, IDestructible, IInterrupter
 {
     public bool isTurnedOn;
     public int speed;
@@ -8,6 +8,7 @@ public class RunStraightBehaviour : BaseObjectBehaviour, IDestructible, IInterru
     public Collider2D collider2d;
 
     Vector3 deltaMovement;
+    bool canBeMoved;
 
     void Start()
     {
@@ -26,13 +27,18 @@ public class RunStraightBehaviour : BaseObjectBehaviour, IDestructible, IInterru
         this.transform.parent.position = this.transform.parent.position + deltaMovement * Time.deltaTime;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    protected override Vector2 ReferencePosition() => this.transform.position;
+
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("collision");
+        if (!canBeMoved)
+            return;
+
         var character = collision.collider.GetComponent<CharacterBehaviour>();
         if (character != null)
         {
-            TurnOn();
+            base.OnCharacterCollision(collision);
             return;
         }
 
@@ -45,6 +51,12 @@ public class RunStraightBehaviour : BaseObjectBehaviour, IDestructible, IInterru
         DestroyObject();
     }
 
+    protected override void OnPlayerContact(Vector2Int dir)
+    {
+        if (dir == Vector2Int.up && canBeMoved)
+            TurnOn();
+    }
+
     public void TurnOn()
     {
         isTurnedOn = true;
@@ -52,8 +64,13 @@ public class RunStraightBehaviour : BaseObjectBehaviour, IDestructible, IInterru
 
     public void TurnOff()
     {
-        isTurnedOn = false;        
+        isTurnedOn = false;
         this.transform.parent.position = Vector3Int.RoundToInt(this.transform.parent.position);
+    }
+
+    internal override void OnPlayerTargetExit()
+    {
+        canBeMoved = true;
     }
 
     public void DestroyObject()
