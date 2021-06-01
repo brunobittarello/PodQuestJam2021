@@ -44,9 +44,9 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
     public void PlayerTargetStart()
     {
         outline.enabled = true;
-        if (current is IRemoteControlable remoteControlable)
+        current.OnPlayerTargetStart();
+        if (current is IRemoteControlable)
         {
-            remoteControlable.PlayerTargetStart();
             enableProxy = true;
         }
     }
@@ -55,8 +55,8 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
     {
         outline.enabled = false;
         enableProxy = false;
-        if (current is IRemoteControlable remoteControlable)
-            remoteControlable.PlayerTargetExit();
+        current.OnPlayerTargetExit();
+
         if (current is IDoor door)
            collider2d.enabled = !door.IsOpened();
     }
@@ -83,5 +83,6 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
         sprRenderer.enabled = false;
         current = Instantiate(objectChannels[currentChannel - 1], this.transform);
         current.transform.localPosition = Vector3.zero;
+        current.OnPlaced();
     }
 }
