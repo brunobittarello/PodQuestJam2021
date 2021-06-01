@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 965036993962582447}
   - component: {fileID: 2340351999884469271}
-  - component: {fileID: 129459963894878929}
-  - component: {fileID: 8327487048019030662}
+  - component: {fileID: 3894608461172838294}
+  - component: {fileID: -1870703393495053058}
   m_Layer: 0
-  m_Name: Drawer
+  m_Name: Prop.Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b2411229cbbacfc4d990cf616b1c1bc9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e6147fdae0e50a4fb3a7c1f4635a9a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &129459963894878929
+--- !u!114 &3894608461172838294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,13 +93,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 191821691367626997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c7191daefc6f54f89d0c0be5ccdce8, type: 3}
+  m_Script: {fileID: 11500000, guid: 43db5ddc706b2b649a14429a76d85944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectable: {fileID: 2561705118599986481, guid: 882a261eb9a84c343a22340ba385350d, type: 3}
-  funfair: {fileID: 0}
-  collider2d: {fileID: 8327487048019030662}
---- !u!61 &8327487048019030662
+  Weight: 40
+--- !u!61 &-1870703393495053058
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,7 +110,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.065668225}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -123,5 +121,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.86866355}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
