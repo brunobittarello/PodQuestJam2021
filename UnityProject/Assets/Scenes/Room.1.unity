@@ -778,6 +778,10 @@ PrefabInstance:
       value: 0.9177984
       objectReference: {fileID: 0}
     - target: {fileID: 3272099361633070969, guid: bfa9356b69c01784e9d69c707e6cf69e, type: 3}
+      propertyPath: playMusic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3272099361633070969, guid: bfa9356b69c01784e9d69c707e6cf69e, type: 3}
       propertyPath: objectChannels.Array.data[0]
       value: 
       objectReference: {fileID: 3894608461172838294, guid: 33c073495abb9ff45ba96c72b6ce90c7, type: 3}

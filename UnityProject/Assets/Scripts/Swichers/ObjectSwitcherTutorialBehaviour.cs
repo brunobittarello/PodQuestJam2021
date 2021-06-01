@@ -6,6 +6,7 @@ public class ObjectSwitcherTutorialBehaviour : ObjectSwitcherBehaviour
     public int correctChannel;
     public bool isRight;
     public ParticleSystem funfair;
+    public bool playMusic;
 
     public override bool ChangeChannel(int channel)
     {
@@ -15,8 +16,7 @@ public class ObjectSwitcherTutorialBehaviour : ObjectSwitcherBehaviour
         isRight = channel == correctChannel;
 
         if (isRight)
-            collider2d.enabled = false;
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ray/RayStatic", transform.position);
+            collider2d.enabled = false;            
         return isRight;
     }
 
@@ -27,6 +27,10 @@ public class ObjectSwitcherTutorialBehaviour : ObjectSwitcherBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ray/RayFunfair", transform.position);
             funfair.Play();
+            if (playMusic) { 
+                var fmodInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Gameplay");
+                fmodInstance.start();
+            }
         }
     }
 }
