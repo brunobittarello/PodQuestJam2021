@@ -1,8 +1,11 @@
 using UnityEngine;
+using System.Collections;
 
 public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
 {
     const float SYNC_TIME = 0.25f;
+
+    private FMOD.Studio.EventInstance instance;
 
     public BaseObjectBehaviour[] objectChannels;
     public int startChannel;
@@ -23,8 +26,8 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
         sprRenderer.enabled = false;
         currentChannel = startChannel;
         LoadChannel();
+        instance = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Gameplay");
     }
-
     void Update()
     {
         if (timer > 0)
@@ -58,7 +61,10 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
         if (current is IRemoteControlable remoteControlable)
             remoteControlable.PlayerTargetExit();
         if (current is IDoor door)
-            collider2d.enabled = !door.IsOpened();
+           collider2d.enabled = !door.IsOpened();
+           instance.start();
+           instance.release();
+            
     }
 
     public virtual bool ChangeChannel(int channel)
