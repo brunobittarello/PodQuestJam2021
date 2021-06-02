@@ -59,6 +59,7 @@ class RunStraightBehaviour : TouchableObjectBehaviour, IDestructible, IInterrupt
 
     public void TurnOn()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ball/BallRoll", transform.position);        
         isTurnedOn = true;
     }
 
@@ -75,6 +76,7 @@ class RunStraightBehaviour : TouchableObjectBehaviour, IDestructible, IInterrupt
 
     public void DestroyObject()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ball/WallBreak", transform.position);
         GameObject.Destroy(this.transform.parent.gameObject);
     }
 }
