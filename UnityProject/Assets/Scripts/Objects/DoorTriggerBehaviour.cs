@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DoorTriggerBehaviour : BaseObjectBehaviour
 {
-    public BalanceBehaviour[] triggers;
+    public RulerBehaviour[] triggers;
     public ParticleSystem funfair;
     public Collider2D collider2d;
     public Sprite openDoorSprite;

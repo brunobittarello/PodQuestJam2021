@@ -2,5 +2,5 @@ using UnityEngine;
 
 public class PropObjectBehaviour : BaseObjectBehaviour
 {
-    public int Weight;
+    public int Height;
 }

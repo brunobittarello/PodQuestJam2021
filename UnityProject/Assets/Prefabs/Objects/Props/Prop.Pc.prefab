@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 156567682217777832}
   - component: {fileID: 156567682217777833}
   m_Layer: 0
-  m_Name: Prop
+  m_Name: Prop.Pc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class WindowBehaviour : BaseObjectBehaviour
+class WindowBehaviour : TouchableObjectBehaviour
 {
     public ParticleSystem funfair;
     private Collider2D m_Collider;
@@ -12,11 +12,11 @@ public class WindowBehaviour : BaseObjectBehaviour
         m_Renderer = GetComponent<SpriteRenderer>();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        CharacterBehaviour character = collision.gameObject.GetComponent<CharacterBehaviour>();
+    protected override Vector2 ReferencePosition() => this.transform.position;
 
-        if (character != null && CharacterBehaviour.HasAxe)
+    protected override void OnPlayerContact(Vector2Int dir)
+    {
+        if (CharacterBehaviour.HasAxe)
             MakeTransparent();
     }
 
@@ -30,5 +30,4 @@ public class WindowBehaviour : BaseObjectBehaviour
         if (funfair != null)
             funfair.Play();
     }
-
 }

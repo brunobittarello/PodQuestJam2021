@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-class MovableBoxBehaviour : BaseObjectBehaviour
+class MovableBoxBehaviour : TouchableObjectBehaviour
 {
     [SerializeField]
     RectInt limitArea;
@@ -36,41 +36,17 @@ class MovableBoxBehaviour : BaseObjectBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        CharacterBehaviour character = collision.gameObject.GetComponent<CharacterBehaviour>();
+    protected override Vector2 ReferencePosition() => targetTransform.position;
 
-        if (character != null && collision.contactCount != 0)
-            TryToMove(collision.contacts[0].point);
-    }
-
-    void TryToMove(Vector2 point)
-    {
-        var localPos = point - (Vector2)targetTransform.position;
-        point = localPos.normalized;
-        point *= -1;
-        if (Mathf.Abs(point.y) > Mathf.Abs(point.x))
-        {
-            if (point.y > 0)
-                TryToMoveByDirection(Vector2Int.up);
-            else
-                TryToMoveByDirection(Vector2Int.down);
-        }
-        else
-        {
-            if (point.x > 0)
-                TryToMoveByDirection(Vector2Int.right);
-            else
-                TryToMoveByDirection(Vector2Int.left);
-        }
-
-    }
-
-    void TryToMoveByDirection(Vector2Int dir)
+    protected override void OnPlayerContact(Vector2Int dir)
     {
         var intPos = Vector2Int.RoundToInt(targetTransform.position);
         var newPos = (intPos + dir);
         if (!limitArea.Contains(newPos))
+            return;
+
+        var collider = Physics2D.OverlapBox(newPos, Vector2.one * 0.2f, 0);
+        if (collider != null)
             return;
 
         isMoving = true;

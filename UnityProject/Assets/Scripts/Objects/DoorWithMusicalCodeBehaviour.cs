@@ -19,15 +19,9 @@ public class DoorWithMusicalCodeBehaviour : BaseObjectBehaviour, IRemoteControla
         inputCode = new int[code.Length];
     }
 
-    public void PlayerTargetStart()
-    {
-        outline.enabled = true;
-    }
+    public void PlayerTargetStart() { }
 
-    public void PlayerTargetExit()
-    {
-        outline.enabled = false;
-    }
+    public void PlayerTargetExit() { }
 
     public bool IsOpened()
     {
@@ -53,7 +47,7 @@ public class DoorWithMusicalCodeBehaviour : BaseObjectBehaviour, IRemoteControla
         if (inputCodeIndex == code.Length)
             return VerifyCode();
         return false;
-        
+
     }
 
     Vector3 MusicNotePosition()
@@ -61,7 +55,7 @@ public class DoorWithMusicalCodeBehaviour : BaseObjectBehaviour, IRemoteControla
         if (inputCodeIndex == 0) return this.transform.position + Vector3.left * 0.5f;
         if (inputCodeIndex == 2) return this.transform.position + Vector3.right * 0.5f;
         return this.transform.position;
-    }    
+    }
 
     bool VerifyCode()
     {

@@ -26,11 +26,11 @@ public class BalanceBehaviour : BaseObjectBehaviour, IReady
     {
         var left = int.MaxValue;
         if (leftSwitch.current is PropObjectBehaviour propLeft)
-            left = propLeft.Weight;
+            left = propLeft.Height;
 
         var right = int.MinValue;
         if (rightSwitch.current is PropObjectBehaviour propRight)
-            right = propRight.Weight;
+            right = propRight.Height;
 
         var status = Messure(left, right);
 

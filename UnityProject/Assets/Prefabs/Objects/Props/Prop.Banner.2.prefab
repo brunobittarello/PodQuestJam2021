@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3600231964754173424}
   - component: {fileID: -5368130590695997867}
   m_Layer: 0
-  m_Name: Prop.Banner
+  m_Name: Prop.Banner.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43db5ddc706b2b649a14429a76d85944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weight: 7
+  Height: 50
 --- !u!61 &-5368130590695997867
 BoxCollider2D:
   m_ObjectHideFlags: 0
