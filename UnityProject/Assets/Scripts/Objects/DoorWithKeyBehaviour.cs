@@ -15,7 +15,10 @@ public class DoorWithKeyBehaviour : BaseObjectBehaviour, IDestructible
             return;
 
         if (character.hasItem)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Key/KeyUse", transform.position);
             DoTheThing(character);
+        }
     }
 
     void DoTheThing(CharacterBehaviour character)

@@ -61,6 +61,7 @@ public class ColorMatcherBehaviour : MonoBehaviour
                         Matched = true;
                         if (Controller != null) 
                         {
+                            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/NPC/ColorConfirm", transform.position);
                             Controller.NotifyMatch(this);
                         }
                     }

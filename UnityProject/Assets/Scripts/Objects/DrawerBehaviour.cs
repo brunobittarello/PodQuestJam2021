@@ -18,6 +18,7 @@ class DrawerBehaviour : TouchableObjectBehaviour
 
     void GiveItem()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Key/KeyGet", transform.position);
         var character = CharacterBehaviour.instance;
         itemIsGone = true;
         character.hasItem = true;
