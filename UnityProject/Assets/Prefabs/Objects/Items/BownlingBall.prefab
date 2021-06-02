@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535516173953287127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 311022058066894663}
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 69cb5a97c136a43429f0cbe3076a6c46, type: 3}
+  m_Sprite: {fileID: -2318697373415339617, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -93,8 +93,9 @@ GameObject:
   - component: {fileID: 311022058066894663}
   - component: {fileID: 7592495619569489281}
   - component: {fileID: 6201767247436670357}
+  - component: {fileID: 5075792605464218617}
   m_Layer: 0
-  m_Name: EnterCar
+  m_Name: BownlingBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,7 +129,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5}
+  m_Offset: {x: 0.000000074505806, y: 0.0010593534}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -139,7 +140,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 1}
+  m_Size: {x: 0.86701703, y: 0.876763}
   m_EdgeRadius: 0
 --- !u!114 &6201767247436670357
 MonoBehaviour:
@@ -154,3 +155,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerTagName: Player
+--- !u!114 &5075792605464218617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3629163391305852973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c15bd4d6fab1b47a38b13ce42c46ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritesAnimation:
+  - {fileID: -2318697373415339617, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  - {fileID: 7345527487916141318, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  - {fileID: -2588723937369036143, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  - {fileID: 7864780435276530990, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  - {fileID: -8671326523306500142, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  - {fileID: -3952381594722191182, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  - {fileID: -3549958976980283937, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  - {fileID: 2137167005369873578, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  speed: 0
