@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 5157445241553988052}
   - component: {fileID: 3007138197532697983}
   - component: {fileID: 1784679115573189017}
+  - component: {fileID: 6082061938840988655}
   m_Layer: 0
-  m_Name: Car
+  m_Name: BowlingBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7157802832864768292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a96138e065fc843fe93f00aa6610bfd0, type: 3}
+  m_Sprite: {fileID: -2318697373415339617, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
@@ -114,18 +115,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0009024143, y: -0.00003540516}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0989012, y: 2.0054946}
+    oldSize: {x: 0.875, y: 0.875}
     newSize: {x: 1.0989012, y: 2.0054946}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5487805, y: 1}
+  m_Size: {x: 0.8783784, y: 0.8777032}
   m_EdgeRadius: 0
 --- !u!50 &1784679115573189017
 Rigidbody2D:
@@ -148,3 +149,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6082061938840988655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7157802832864768292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c15bd4d6fab1b47a38b13ce42c46ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritesAnimation:
+  - {fileID: -2318697373415339617, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  - {fileID: 7345527487916141318, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  - {fileID: -2588723937369036143, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  - {fileID: 7864780435276530990, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  - {fileID: -8671326523306500142, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  - {fileID: -3952381594722191182, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  - {fileID: -3549958976980283937, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  - {fileID: 2137167005369873578, guid: 9aaf090f62b857f419f063c2986160de, type: 3}
+  speed: 0
