@@ -26,6 +26,7 @@ public class NpcColorSwitcherBehaviour : MonoBehaviour, IRemoteControlable
 
     public bool ChangeChannel(int channel)
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ray/RayStatic", transform.position);
         if (channel != 0)
         {
             var colorIndex = (channel - 1) % ChannelColors.Length;

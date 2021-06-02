@@ -15,6 +15,7 @@ public class DropBehaviour : MonoBehaviour
             if (Funfair != null)
             {
                 Funfair.Play();
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ray/RayFunfair", transform.position);
             }
             Dropped = true;
             Instantiate(ObjectToDrop, this.transform.position, Quaternion.identity);
