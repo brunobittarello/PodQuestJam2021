@@ -1,9 +1,13 @@
 using UnityEngine;
 
+// TODO: Muito da lógica para escolher e animar sprites poderia ser re-usada de/para CharacterBehaviour.cs. 
 public class MovingBehaviour : MonoBehaviour
 {
-    const float SPEED = 2.5f;
-    const float ANIMATION_SPEED = 0.2f;
+    public int WalkingSpritesNumber = 8;
+
+    public float AnimationSpeed = 0.2f;
+
+    public float Speed = 2.0f;
 
     public Sprite[] sprites;
 
@@ -90,7 +94,7 @@ public class MovingBehaviour : MonoBehaviour
 
     void Move(Vector3 deltaMovement)
     {
-        this.transform.position = this.transform.position + deltaMovement * Time.deltaTime * SPEED;
+        this.transform.position = this.transform.position + deltaMovement * Time.deltaTime * Speed;
         Animate(deltaMovement);
         lastMovement = deltaMovement;
     }
@@ -100,7 +104,7 @@ public class MovingBehaviour : MonoBehaviour
         if (deltaMovement != Vector3.zero)
         {
             animationTimer += Time.deltaTime;
-            if (animationTimer > ANIMATION_SPEED)
+            if (animationTimer > AnimationSpeed)
             {
                 sprRenderer.sprite = GetMovingSprite(deltaMovement);
                 animationTimer = 0;
@@ -111,14 +115,14 @@ public class MovingBehaviour : MonoBehaviour
             return;
 
         sprRenderer.sprite = GetIdleSprite(lastMovement);
-        animationTimer = ANIMATION_SPEED;
+        animationTimer = AnimationSpeed;
     }
 
     protected virtual Sprite GetMovingSprite(Vector3 direction)
     {
         sprRenderer.flipX = false;
         movingSpriteIndex++;
-        if (movingSpriteIndex == 4)
+        if (movingSpriteIndex == WalkingSpritesNumber)
             movingSpriteIndex = 0;
 
         if (direction.y > 0)
@@ -134,14 +138,7 @@ public class MovingBehaviour : MonoBehaviour
 
     Sprite GetMovingSprite(int offset)
     {
-        switch (movingSpriteIndex)
-        {
-            case 0:
-            case 2: return sprites[0 + offset];
-            case 1: return sprites[3 + offset * 2];
-            case 3: return sprites[4 + offset * 2];
-        }
-        return null;
+        return sprites[WalkingSpritesNumber * offset + 3 + movingSpriteIndex];
     }
 
     protected virtual Sprite GetIdleSprite(Vector3 direction)
