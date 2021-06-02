@@ -331,6 +331,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d95faa0d73cb974ca7d13f5cba65e2f, type: 3}
+--- !u!1 &615339249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5644207569396493017, guid: 8d95faa0d73cb974ca7d13f5cba65e2f, type: 3}
+  m_PrefabInstance: {fileID: 615339248}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &615339250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615339249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Drone/RoomDrone
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!114 &785047979 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4260506439887500576, guid: e6f17d80972ddb543b21f0ed8ce4b729, type: 3}
@@ -347,7 +375,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8858952017564695994, guid: 8d95faa0d73cb974ca7d13f5cba65e2f, type: 3}
   m_PrefabInstance: {fileID: 615339248}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 615339249}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43db5ddc706b2b649a14429a76d85944, type: 3}
@@ -483,6 +511,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89a673a627e9c3643b738b3b498d3579, type: 3}
+--- !u!1 &1004872724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7620822739418158999, guid: 89a673a627e9c3643b738b3b498d3579, type: 3}
+  m_PrefabInstance: {fileID: 1004872723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1004872725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004872724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Character/DoorShut
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!114 &1106069671 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4260506439887500576, guid: e6f17d80972ddb543b21f0ed8ce4b729, type: 3}

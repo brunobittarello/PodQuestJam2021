@@ -381,6 +381,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89a673a627e9c3643b738b3b498d3579, type: 3}
+--- !u!1 &1004872724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7620822739418158999, guid: 89a673a627e9c3643b738b3b498d3579, type: 3}
+  m_PrefabInstance: {fileID: 1004872723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1004872725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004872724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Character/DoorShut
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1420698184 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2208584111477667383, guid: 996204845293df64991a307efd4f4db0, type: 3}
@@ -525,6 +553,34 @@ PrefabInstance:
       objectReference: {fileID: 1857026499}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 130bd5c1437588843be4d4368895376e, type: 3}
+--- !u!1 &1068167613301615508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1068167612365929456, guid: 130bd5c1437588843be4d4368895376e, type: 3}
+  m_PrefabInstance: {fileID: 1068167613301615507}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1068167613301615509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068167613301615508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Drone/RoomDrone
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &6461294870169971942
 PrefabInstance:
   m_ObjectHideFlags: 0

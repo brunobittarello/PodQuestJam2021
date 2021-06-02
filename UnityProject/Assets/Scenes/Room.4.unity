@@ -704,6 +704,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89a673a627e9c3643b738b3b498d3579, type: 3}
+--- !u!1 &438733968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7620822739418158999, guid: 89a673a627e9c3643b738b3b498d3579, type: 3}
+  m_PrefabInstance: {fileID: 438733967}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &438733969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438733968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Character/DoorShut
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3268,6 +3296,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5473762401990095527, guid: 0b16fa4c3c952ff4e82d1bfd6f9dcf16, type: 3}
   m_PrefabInstance: {fileID: 1835317502}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1835317504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5473762401990095528, guid: 0b16fa4c3c952ff4e82d1bfd6f9dcf16, type: 3}
+  m_PrefabInstance: {fileID: 1835317502}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1835317505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835317504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Drone/RoomDrone
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1937292165
 GameObject:
   m_ObjectHideFlags: 0
