@@ -6,6 +6,7 @@ class RunStraightBehaviour : TouchableObjectBehaviour, IDestructible, IInterrupt
     public int speed;
     public Vector2Int direction;
     public Collider2D collider2d;
+    private CyclicAnimation ca;
 
     Vector3 deltaMovement;
     bool canBeMoved;
@@ -13,6 +14,8 @@ class RunStraightBehaviour : TouchableObjectBehaviour, IDestructible, IInterrupt
     void Start()
     {
         deltaMovement = (Vector2)direction * speed;
+        ca = gameObject.GetComponent<CyclicAnimation>();
+        ca.enabled = false;
     }
 
     void Update()
@@ -59,6 +62,8 @@ class RunStraightBehaviour : TouchableObjectBehaviour, IDestructible, IInterrupt
 
     public void TurnOn()
     {
+        ca.enabled = true;
+
         isTurnedOn = true;
     }
 
