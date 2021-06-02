@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2545183773001928535}
   - component: {fileID: 3829391554180768982}
   m_Layer: 0
-  m_Name: Prop.Guitars
+  m_Name: Prop.Shower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7c2f3be8f7915eb4fbca6934990f0db0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8116c8aa387cc0408d81d09a42de75d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
