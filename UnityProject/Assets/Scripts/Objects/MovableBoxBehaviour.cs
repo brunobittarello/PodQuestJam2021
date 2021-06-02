@@ -45,6 +45,10 @@ class MovableBoxBehaviour : TouchableObjectBehaviour
         if (!limitArea.Contains(newPos))
             return;
 
+        var collider = Physics2D.OverlapBox(newPos, Vector2.one * 0.2f, 0);
+        if (collider != null)
+            return;
+
         isMoving = true;
         targetPos = newPos;
     }
