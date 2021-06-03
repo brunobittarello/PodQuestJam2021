@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-public class RulerBehaviour : MonoBehaviour, IReady
+class RulerBehaviour : ReadyBehaviour
 {
     public PropObjectBehaviour biggest;
     public PropObjectBehaviour lowest;
@@ -27,7 +27,7 @@ public class RulerBehaviour : MonoBehaviour, IReady
             rightHeight = propRight.Height;
     }
 
-    public bool IsReady()
+    public override bool IsReady()
     {
         return biggest.Height > leftHeight && leftHeight > rightHeight && rightHeight > lowest.Height;
     }
