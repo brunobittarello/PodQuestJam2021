@@ -13,7 +13,7 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
     protected Collider2D collider2d;
 
     internal BaseObjectBehaviour current;
-    int currentChannel;
+    public int CurrentChannel { get; private set;}
     float timer;
     bool enableProxy;
 
@@ -22,7 +22,7 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
         sprRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         collider2d = this.gameObject.GetComponent<Collider2D>();
         sprRenderer.enabled = false;
-        currentChannel = startChannel;
+        CurrentChannel = startChannel;
         LoadChannel();        
     }
     void Update()
@@ -69,7 +69,7 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
         if (enableProxy && current is IRemoteControlable remoteControlable)
             return remoteControlable.ChangeChannel(channel);
 
-        currentChannel = channel;
+        CurrentChannel = channel;
         sprRenderer.enabled = true;
         timer = SYNC_TIME;
         if (current != null)
@@ -81,7 +81,7 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
     protected virtual void LoadChannel()
     {
         sprRenderer.enabled = false;
-        current = Instantiate(objectChannels[currentChannel - 1], this.transform);
+        current = Instantiate(objectChannels[CurrentChannel - 1], this.transform);
         current.transform.localPosition = Vector3.zero;
         current.OnPlaced();
     }

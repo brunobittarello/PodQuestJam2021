@@ -4,9 +4,12 @@ using UnityEngine;
 class PositionChecker : ReadyBehaviour
 {
     [SerializeField]
-    PropObjectBehaviour[] props;
+    ObjectSwitcherBehaviour[] props;
     [SerializeField]
     Vector2Int[] positions;
+    [SerializeField]
+    int[] channels;
+
     bool isRight;
 
     void Update()
@@ -17,7 +20,7 @@ class PositionChecker : ReadyBehaviour
     bool CheckPositions()
     {
         for (int i = 0; i < props.Length; i++)
-            if (positions[i] != Vector2Int.RoundToInt((Vector2)props[i].transform.position))
+            if (channels[i] != props[i].CurrentChannel || positions[i] != Vector2Int.RoundToInt((Vector2)props[i].transform.position))
                 return false;
         return true;
     }
