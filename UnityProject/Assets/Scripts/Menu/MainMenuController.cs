@@ -17,6 +17,6 @@ class MainMenuController : MonoBehaviour
     void OnAnimationEnds()
     {
         SceneManager.LoadScene("Room.1");
-        Camera.main.enabled = false;
+        //Camera.main.enabled = false;
     }
 }
