@@ -32,10 +32,14 @@ public class CharacterBehaviour : MonoBehaviour
     bool isIntro;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        instance = this;        
+        HasRemoteController = true;
+    }
+
     protected virtual void Start()
     {
-        instance = this;
-        HasRemoteController = true;
         sprRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         collider2d = this.gameObject.GetComponent<Collider2D>();
         direction = lastMovement = Vector2Int.up;
