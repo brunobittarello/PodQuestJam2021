@@ -12,12 +12,8 @@ class MainMenuController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            {
-                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("IntroSpace", 1);
-            }
-
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("IntroSpace", 1);
             animator.SetTrigger("trigContinue");
-
         }
     }
 
