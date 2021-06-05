@@ -163,7 +163,7 @@ MonoBehaviour:
   openDoorSprite: {fileID: 21300000, guid: 7daa2c7194ef25644b55f664ed780df6, type: 3}
   popup: {fileID: 3449370204311159321}
   outline: {fileID: 6620401299298752009}
-  code: 010000000200000003000000
+  code: 020000000500000008000000
 --- !u!61 &5383451626221780924
 BoxCollider2D:
   m_ObjectHideFlags: 0

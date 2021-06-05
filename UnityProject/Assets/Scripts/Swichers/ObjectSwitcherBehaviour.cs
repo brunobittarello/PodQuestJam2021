@@ -63,12 +63,12 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
 
     public virtual bool ChangeChannel(int channel)
     {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ray/RayStatic", transform.position);
         if (timer > 0) return false;
 
         if (enableProxy && current is IRemoteControlable remoteControlable)
             return remoteControlable.ChangeChannel(channel);
 
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ray/RayStatic", transform.position);
         CurrentChannel = channel;
         sprRenderer.enabled = true;
         timer = SYNC_TIME;

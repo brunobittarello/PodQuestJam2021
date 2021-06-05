@@ -42,6 +42,7 @@ public class DoorWithMusicalCodeBehaviour : BaseObjectBehaviour, IRemoteControla
         popup.Show();
         popup.spriteRender.color = SoundBoxBehaviour.NoteColorByChannel(channel);
         inputCode[inputCodeIndex] = channel;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Instruments/Guitar/Guitar" + channel, transform.position);
 
         inputCodeIndex++;
         if (inputCodeIndex == code.Length)
