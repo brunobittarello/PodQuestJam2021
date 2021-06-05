@@ -428,7 +428,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1416219913264137028, guid: 64bb121f2e6ce4258b6a9433d259e04b, type: 3}
       propertyPath: SceneName
-      value: Room.99
+      value: Room.8
       objectReference: {fileID: 0}
     - target: {fileID: 1416219913264137029, guid: 64bb121f2e6ce4258b6a9433d259e04b, type: 3}
       propertyPath: m_Name
