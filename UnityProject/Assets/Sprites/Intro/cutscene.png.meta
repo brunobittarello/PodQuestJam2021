@@ -251,6 +251,93 @@ TextureImporter:
   - first:
       213: 1761931489573730005
     second: cutscene_82
+  - first:
+      213: 4095950003252904781
+    second: cutscene_83
+  - first:
+      213: -3930838523953174798
+    second: cutscene_84
+  - first:
+      213: 3181033136967354932
+    second: cutscene_85
+  - first:
+      213: -8841742307174933530
+    second: cutscene_86
+  - first:
+      213: 7288597815660884329
+    second: cutscene_87
+  - first:
+      213: 2126923100809853753
+    second: cutscene_88
+  - first:
+      213: -8850219189469993458
+    second: cutscene_89
+  - first:
+      213: 7378770322580286007
+    second: cutscene_90
+  - first:
+      213: -6217417549856508406
+    second: cutscene_91
+  - first:
+      213: 924991250110473534
+    second: cutscene_92
+  - first:
+      213: 6018577007242269796
+    second: cutscene_93
+  - first:
+      213: 1180927975303869830
+    second: cutscene_94
+  - first:
+      213: -7739150003004224275
+    second: cutscene_95
+  - first:
+      213: 4164786589904396403
+    second: cutscene_96
+  - first:
+      213: 1637267811066291750
+    second: cutscene_97
+  - first:
+      213: -4366368916373022316
+    second: cutscene_98
+  - first:
+      213: -2093424872863161420
+    second: cutscene_99
+  - first:
+      213: -8184245932487537904
+    second: cutscene_100
+  - first:
+      213: -3844316402060033391
+    second: cutscene_101
+  - first:
+      213: -2091795384693206227
+    second: cutscene_102
+  - first:
+      213: 4693073838092020163
+    second: cutscene_103
+  - first:
+      213: 2971444254688941631
+    second: cutscene_104
+  - first:
+      213: 7770817735742290319
+    second: cutscene_105
+  - first:
+      213: 3499936206335760941
+    second: cutscene_106
+  - first:
+      213: -3968024454750496995
+    second: cutscene_107
+  - first:
+      213: 7704183164572828367
+    second: cutscene_108
+  - first:
+      213: 3020447841578753070
+    second: cutscene_109
+  - first:
+      213: -6438992458552045704
+    second: cutscene_110
+  - first:
+      213: 3709166990761083044
+    second: cutscene_111
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -368,7 +455,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1116
+        y: 1488
         width: 226
         height: 124
       alignment: 0
@@ -389,7 +476,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 226
-        y: 1116
+        y: 1488
         width: 226
         height: 124
       alignment: 0
@@ -410,7 +497,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 452
-        y: 1116
+        y: 1488
         width: 226
         height: 124
       alignment: 0
@@ -431,7 +518,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 678
-        y: 1116
+        y: 1488
         width: 226
         height: 124
       alignment: 0
@@ -452,7 +539,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 904
-        y: 1116
+        y: 1488
         width: 226
         height: 124
       alignment: 0
@@ -473,7 +560,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1130
-        y: 1116
+        y: 1488
         width: 226
         height: 124
       alignment: 0
@@ -494,7 +581,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1356
-        y: 1116
+        y: 1488
         width: 226
         height: 124
       alignment: 0
@@ -515,7 +602,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1582
-        y: 1116
+        y: 1488
         width: 226
         height: 124
       alignment: 0
@@ -536,7 +623,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1808
-        y: 1116
+        y: 1488
         width: 226
         height: 124
       alignment: 0
@@ -557,7 +644,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 992
+        y: 1364
         width: 226
         height: 124
       alignment: 0
@@ -578,7 +665,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 226
-        y: 992
+        y: 1364
         width: 226
         height: 124
       alignment: 0
@@ -599,7 +686,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 452
-        y: 992
+        y: 1364
         width: 226
         height: 124
       alignment: 0
@@ -620,7 +707,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 678
-        y: 992
+        y: 1364
         width: 226
         height: 124
       alignment: 0
@@ -641,7 +728,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 904
-        y: 992
+        y: 1364
         width: 226
         height: 124
       alignment: 0
@@ -662,7 +749,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1130
-        y: 992
+        y: 1364
         width: 226
         height: 124
       alignment: 0
@@ -683,7 +770,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1356
-        y: 992
+        y: 1364
         width: 226
         height: 124
       alignment: 0
@@ -704,7 +791,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1582
-        y: 992
+        y: 1364
         width: 226
         height: 124
       alignment: 0
@@ -725,7 +812,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1808
-        y: 992
+        y: 1364
         width: 226
         height: 124
       alignment: 0
@@ -746,7 +833,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 868
+        y: 1240
         width: 226
         height: 124
       alignment: 0
@@ -767,7 +854,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 226
-        y: 868
+        y: 1240
         width: 226
         height: 124
       alignment: 0
@@ -788,7 +875,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 452
-        y: 868
+        y: 1240
         width: 226
         height: 124
       alignment: 0
@@ -809,7 +896,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 678
-        y: 868
+        y: 1240
         width: 226
         height: 124
       alignment: 0
@@ -830,7 +917,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 904
-        y: 868
+        y: 1240
         width: 226
         height: 124
       alignment: 0
@@ -851,7 +938,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1130
-        y: 868
+        y: 1240
         width: 226
         height: 124
       alignment: 0
@@ -872,7 +959,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1356
-        y: 868
+        y: 1240
         width: 226
         height: 124
       alignment: 0
@@ -893,7 +980,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1582
-        y: 868
+        y: 1240
         width: 226
         height: 124
       alignment: 0
@@ -914,7 +1001,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1808
-        y: 868
+        y: 1240
         width: 226
         height: 124
       alignment: 0
@@ -935,7 +1022,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 744
+        y: 1116
         width: 226
         height: 124
       alignment: 0
@@ -956,7 +1043,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 226
-        y: 744
+        y: 1116
         width: 226
         height: 124
       alignment: 0
@@ -977,7 +1064,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 452
-        y: 744
+        y: 1116
         width: 226
         height: 124
       alignment: 0
@@ -998,7 +1085,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 678
-        y: 744
+        y: 1116
         width: 226
         height: 124
       alignment: 0
@@ -1019,7 +1106,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 904
-        y: 744
+        y: 1116
         width: 226
         height: 124
       alignment: 0
@@ -1040,7 +1127,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1130
-        y: 744
+        y: 1116
         width: 226
         height: 124
       alignment: 0
@@ -1061,7 +1148,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1356
-        y: 744
+        y: 1116
         width: 226
         height: 124
       alignment: 0
@@ -1082,7 +1169,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1582
-        y: 744
+        y: 1116
         width: 226
         height: 124
       alignment: 0
@@ -1103,7 +1190,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1808
-        y: 744
+        y: 1116
         width: 226
         height: 124
       alignment: 0
@@ -1124,7 +1211,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 620
+        y: 992
         width: 226
         height: 124
       alignment: 0
@@ -1145,7 +1232,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 226
-        y: 620
+        y: 992
         width: 226
         height: 124
       alignment: 0
@@ -1166,7 +1253,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 452
-        y: 620
+        y: 992
         width: 226
         height: 124
       alignment: 0
@@ -1187,7 +1274,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 678
-        y: 620
+        y: 992
         width: 226
         height: 124
       alignment: 0
@@ -1208,7 +1295,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 904
-        y: 620
+        y: 992
         width: 226
         height: 124
       alignment: 0
@@ -1229,7 +1316,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1130
-        y: 620
+        y: 992
         width: 226
         height: 124
       alignment: 0
@@ -1250,7 +1337,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1356
-        y: 620
+        y: 992
         width: 226
         height: 124
       alignment: 0
@@ -1271,7 +1358,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1582
-        y: 620
+        y: 992
         width: 226
         height: 124
       alignment: 0
@@ -1292,7 +1379,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1808
-        y: 620
+        y: 992
         width: 226
         height: 124
       alignment: 0
@@ -1313,7 +1400,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 496
+        y: 868
         width: 226
         height: 124
       alignment: 0
@@ -1334,7 +1421,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 226
-        y: 496
+        y: 868
         width: 226
         height: 124
       alignment: 0
@@ -1355,7 +1442,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 452
-        y: 496
+        y: 868
         width: 226
         height: 124
       alignment: 0
@@ -1376,7 +1463,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 678
-        y: 496
+        y: 868
         width: 226
         height: 124
       alignment: 0
@@ -1397,7 +1484,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 904
-        y: 496
+        y: 868
         width: 226
         height: 124
       alignment: 0
@@ -1418,7 +1505,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1130
-        y: 496
+        y: 868
         width: 226
         height: 124
       alignment: 0
@@ -1439,7 +1526,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1356
-        y: 496
+        y: 868
         width: 226
         height: 124
       alignment: 0
@@ -1460,7 +1547,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1582
-        y: 496
+        y: 868
         width: 226
         height: 124
       alignment: 0
@@ -1481,7 +1568,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1808
-        y: 496
+        y: 868
         width: 226
         height: 124
       alignment: 0
@@ -1502,7 +1589,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 372
+        y: 744
         width: 226
         height: 124
       alignment: 0
@@ -1523,7 +1610,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 226
-        y: 372
+        y: 744
         width: 226
         height: 124
       alignment: 0
@@ -1544,7 +1631,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 452
-        y: 372
+        y: 744
         width: 226
         height: 124
       alignment: 0
@@ -1565,7 +1652,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 678
-        y: 372
+        y: 744
         width: 226
         height: 124
       alignment: 0
@@ -1586,7 +1673,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 904
-        y: 372
+        y: 744
         width: 226
         height: 124
       alignment: 0
@@ -1607,7 +1694,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1130
-        y: 372
+        y: 744
         width: 226
         height: 124
       alignment: 0
@@ -1628,7 +1715,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1356
-        y: 372
+        y: 744
         width: 226
         height: 124
       alignment: 0
@@ -1649,7 +1736,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1582
-        y: 372
+        y: 744
         width: 226
         height: 124
       alignment: 0
@@ -1670,7 +1757,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1808
-        y: 372
+        y: 744
         width: 226
         height: 124
       alignment: 0
@@ -1691,7 +1778,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 248
+        y: 620
         width: 226
         height: 124
       alignment: 0
@@ -1712,7 +1799,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 226
-        y: 248
+        y: 620
         width: 226
         height: 124
       alignment: 0
@@ -1733,7 +1820,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 452
-        y: 248
+        y: 620
         width: 226
         height: 124
       alignment: 0
@@ -1754,7 +1841,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 678
-        y: 248
+        y: 620
         width: 226
         height: 124
       alignment: 0
@@ -1775,7 +1862,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 904
-        y: 248
+        y: 620
         width: 226
         height: 124
       alignment: 0
@@ -1796,7 +1883,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1130
-        y: 248
+        y: 620
         width: 226
         height: 124
       alignment: 0
@@ -1817,7 +1904,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1356
-        y: 248
+        y: 620
         width: 226
         height: 124
       alignment: 0
@@ -1838,7 +1925,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1582
-        y: 248
+        y: 620
         width: 226
         height: 124
       alignment: 0
@@ -1859,7 +1946,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1808
-        y: 248
+        y: 620
         width: 226
         height: 124
       alignment: 0
@@ -1880,7 +1967,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 124
+        y: 496
         width: 226
         height: 124
       alignment: 0
@@ -1901,7 +1988,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 226
-        y: 124
+        y: 496
         width: 226
         height: 124
       alignment: 0
@@ -1922,7 +2009,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 452
-        y: 124
+        y: 496
         width: 226
         height: 124
       alignment: 0
@@ -1943,7 +2030,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 678
-        y: 124
+        y: 496
         width: 226
         height: 124
       alignment: 0
@@ -1964,7 +2051,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 904
-        y: 124
+        y: 496
         width: 226
         height: 124
       alignment: 0
@@ -1985,7 +2072,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1130
-        y: 124
+        y: 496
         width: 226
         height: 124
       alignment: 0
@@ -2006,7 +2093,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1356
-        y: 124
+        y: 496
         width: 226
         height: 124
       alignment: 0
@@ -2027,7 +2114,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1582
-        y: 124
+        y: 496
         width: 226
         height: 124
       alignment: 0
@@ -2048,7 +2135,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1808
-        y: 124
+        y: 496
         width: 226
         height: 124
       alignment: 0
@@ -2069,7 +2156,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 372
         width: 226
         height: 124
       alignment: 0
@@ -2090,7 +2177,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 226
-        y: 0
+        y: 372
         width: 226
         height: 124
       alignment: 0
@@ -2102,6 +2189,615 @@ TextureImporter:
       bones: []
       spriteID: 5d6fd9aca53a37810800000000000000
       internalID: 1761931489573730005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_83
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 372
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4346a1a3dcb7d830800000000000000
+      internalID: 4095950003252904781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_84
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 372
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6a95e503bd279c0800000000000000
+      internalID: -3930838523953174798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_85
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 372
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a8fa3c8cc452c20800000000000000
+      internalID: 3181033136967354932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_86
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 372
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb9b499732db4580800000000000000
+      internalID: -8841742307174933530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_87
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 372
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961b721c81d462560800000000000000
+      internalID: 7288597815660884329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_88
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 372
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93bf7509a49548d10800000000000000
+      internalID: 2126923100809853753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_89
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 372
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06ab43a984bd2580800000000000000
+      internalID: -8850219189469993458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 248
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73aa7949388a66660800000000000000
+      internalID: 7378770322580286007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_91
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 248
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06f5800eab47b9a0800000000000000
+      internalID: -6217417549856508406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_92
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 248
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e35ed2324aa36dc00800000000000000
+      internalID: 924991250110473534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_93
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 248
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 464520a76e7468350800000000000000
+      internalID: 6018577007242269796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_94
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 248
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685fe499cbf736010800000000000000
+      internalID: 1180927975303869830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_95
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 248
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec48777314099490800000000000000
+      internalID: -7739150003004224275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_96
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 248
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370ef88665b4cc930800000000000000
+      internalID: 4164786589904396403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_97
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 248
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626a9c8466eb8b610800000000000000
+      internalID: 1637267811066291750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_98
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 248
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4995745ca9a8763c0800000000000000
+      internalID: -4366368916373022316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b326096b29a2f2e0800000000000000
+      internalID: -2093424872863161420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_100
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 124
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b05a7bfa7bb6e80800000000000000
+      internalID: -8184245932487537904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_101
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 124
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1920103b99e36aac0800000000000000
+      internalID: -3844316402060033391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_102
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 124
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d235f803e2378f2e0800000000000000
+      internalID: -2091795384693206227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_103
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 124
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c967207ac5212140800000000000000
+      internalID: 4693073838092020163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_104
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 124
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f361c966ec0bc3920800000000000000
+      internalID: 2971444254688941631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_105
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 124
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8979312f8d77db60800000000000000
+      internalID: 7770817735742290319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_106
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 124
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2adb2baf65429030800000000000000
+      internalID: 3499936206335760941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_107
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 124
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17988a28cebee8c0800000000000000
+      internalID: -3968024454750496995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc288e805c1caea60800000000000000
+      internalID: 7704183164572828367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_109
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 0
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c95e31f49cae920800000000000000
+      internalID: 3020447841578753070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_110
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 0
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f0694697a14a6a0800000000000000
+      internalID: -6438992458552045704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene_111
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 0
+        width: 226
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a04be0e9bb997330800000000000000
+      internalID: 3709166990761083044
       vertices: []
       indices: 
       edges: []
