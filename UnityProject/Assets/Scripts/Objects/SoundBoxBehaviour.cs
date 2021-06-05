@@ -3,7 +3,7 @@ using UnityEngine;
 
 class SoundBoxBehaviour : BaseObjectBehaviour, IInterrupter
 {
-    const float TIME = 0.6f;
+    const float TIME = 0.8f;
 
     public int[] code;
     public PopUpBehaviour musicNote;
@@ -37,6 +37,7 @@ class SoundBoxBehaviour : BaseObjectBehaviour, IInterrupter
         musicNote.Show();
         musicNote.transform.position = MusicNotePosition(index);
         musicNote.spriteRender.color = NoteColorByChannel(code[index]);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Instruments/Bass/Bass" + code[index], transform.position);
     }
 
     Vector3 MusicNotePosition(int index)//TODO merge with DoorWithMusicalCodeBehaviour function

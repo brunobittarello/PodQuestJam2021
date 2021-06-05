@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4efb06436b4990498624faae3877964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  code: 010000000200000003000000
+  code: 020000000500000008000000
   musicNote: {fileID: 5722282582583781798}
 --- !u!61 &8972443136608170206
 BoxCollider2D:

@@ -25,7 +25,7 @@ class RemoteControllerUIEffect : MonoBehaviour
     void Awake()
     {
         instance = this;
-        state = Status.Out;
+        Out();
 
         var posX = this.transform.position.x;
         posShow = new Vector3(posX, 0, 0);
@@ -47,6 +47,7 @@ class RemoteControllerUIEffect : MonoBehaviour
     public void Show()
     {
         state = Status.Entering;
+        this.gameObject.SetActive(true);
     }
 
     public void Hide()
@@ -68,7 +69,13 @@ class RemoteControllerUIEffect : MonoBehaviour
     void UpdateExiting()
     {
         if (MoveTowards(posHide))
-            state = Status.Showing;
+            Out();
+    }
+
+    void Out()
+    {
+        state = Status.Out;
+        this.gameObject.SetActive(false);
     }
 
     bool MoveTowards(Vector3 position)
