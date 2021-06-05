@@ -7,11 +7,14 @@ class MainMenuController : MonoBehaviour
 {
     [SerializeField]
     Animator animator;
-
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
+        {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("IntroSpace", 1);
             animator.SetTrigger("trigContinue");
+        }
     }
 
     void OnAnimationEnds()
