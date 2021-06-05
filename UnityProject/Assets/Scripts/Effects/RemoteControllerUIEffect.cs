@@ -6,8 +6,12 @@ class RemoteControllerUIEffect : MonoBehaviour
     const float SPEED = 12f;
     const float HIDE_Y = -4.5f;
 
+    [SerializeField]
+    Sprite[] sprites;
+
     static internal RemoteControllerUIEffect instance; 
 
+    SpriteRenderer sprRender;
     float timer;
     Status state;
 
@@ -27,6 +31,7 @@ class RemoteControllerUIEffect : MonoBehaviour
         instance = this;
         Out();
 
+        sprRender = this.gameObject.GetComponent<SpriteRenderer>();
         var posX = this.transform.position.x;
         posShow = new Vector3(posX, 0, 0);
         posHide = new Vector3(posX, HIDE_Y, 0);
@@ -57,7 +62,9 @@ class RemoteControllerUIEffect : MonoBehaviour
 
     public void ControllerButtonPressed(int button)
     {
-
+        if (button == -1)
+            button = sprites.Length - 1;
+        sprRender.sprite = sprites[button];
     }
 
     void UpdateEntering()

@@ -27,8 +27,8 @@ class ShowcaseBehaviour : MonoBehaviour
     void ToggleRemoteControllerPossession()
     {
         var hasPossession = !CharacterBehaviour.instance.HasRemoteController;
+        this.transform.GetChild(0).gameObject.SetActive(!hasPossession);
         CharacterBehaviour.instance.HasRemoteController = hasPossession;
-        spriteRenderer.color = hasPossession ? Color.red : Color.white;
         openDoor.SetActive(!hasPossession);
         switchObject.SetActive(hasPossession);
     }
