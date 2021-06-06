@@ -95,4 +95,17 @@ class RemoteControllerUIEffect : MonoBehaviour
         }
         return false;
     }
+
+    public static Color ColorByChannel(int channel)
+    {
+        if (channel == 1) return new Color32(223, 113, 38, 255);//orange
+        if (channel == 2) return new Color32(213, 123, 186, 255);//pink
+        if (channel == 3) return new Color32(153, 229, 80, 255);//lime
+        if (channel == 4) return new Color32(143, 151, 74, 255);//gold
+        if (channel == 5) return new Color32(118, 66, 138, 255);//purple
+        if (channel == 6) return new Color32(55, 148, 110, 255);//green
+        if (channel == 7) return new Color32(251, 242, 54, 255);//yellow
+        if (channel == 8) return new Color32(91, 110, 225, 255);//lilac 
+        return new Color32(172, 50, 50, 255);//lilac 
+    }
 }
