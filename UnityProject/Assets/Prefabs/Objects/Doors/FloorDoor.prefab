@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerTag: Player
-  SceneName: Room.5
+  SceneName: Room.99
 --- !u!61 &509757361532533090
 BoxCollider2D:
   m_ObjectHideFlags: 0
