@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class NpcColorSwitcherBehaviour : MonoBehaviour, IRemoteControlable
 {
-    public Color[] ChannelColors;
-
-    private MovingBehaviour m_Npc;
-    private SpriteRenderer m_SpriteRenderer;
+    MovingBehaviour m_Npc;
+    SpriteRenderer m_SpriteRenderer;
+    public int Channel { get; private set; }
 
     void Start()
     {
@@ -29,8 +28,8 @@ public class NpcColorSwitcherBehaviour : MonoBehaviour, IRemoteControlable
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ray/RayStatic", transform.position);
         if (channel != 0)
         {
-            var colorIndex = (channel - 1) % ChannelColors.Length;
-            m_SpriteRenderer.color = ChannelColors[colorIndex];
+            Channel = channel;
+            m_SpriteRenderer.color = RemoteControllerUIEffect.ColorByChannel(channel);
         }
         return true;
     }

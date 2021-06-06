@@ -36,7 +36,7 @@ class SoundBoxBehaviour : BaseObjectBehaviour, IInterrupter
     {
         musicNote.Show();
         musicNote.transform.position = MusicNotePosition(index);
-        musicNote.spriteRender.color = NoteColorByChannel(code[index]);
+        musicNote.spriteRender.color = RemoteControllerUIEffect.ColorByChannel(code[index]);
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Instruments/Bass/Bass" + code[index], transform.position);
     }
 
@@ -63,16 +63,5 @@ class SoundBoxBehaviour : BaseObjectBehaviour, IInterrupter
         isTurnedOn = true;
     }
 
-    public static Color NoteColorByChannel(int channel)
-    {
-        if (channel == 1) return Color.white;
-        if (channel == 2) return Color.grey;
-        if (channel == 3) return Color.green;
-        if (channel == 4) return Color.red;
-        if (channel == 5) return Color.cyan;
-        if (channel == 6) return Color.magenta;
-        if (channel == 7) return Color.yellow;
-        if (channel == 8) return new Color(1, .3f, 0);
-        return new Color(0, .3f, 1);
-    }
+    
 }
