@@ -33,4 +33,9 @@ class CyclicAnimation : MonoBehaviour
             index = 0;
     }
 
+    public void SetSprites(Sprite[] sprites)
+    {
+        spritesAnimation = sprites;
+        index = 0;
+    }
 }
