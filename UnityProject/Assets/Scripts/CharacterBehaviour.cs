@@ -12,7 +12,7 @@ public class CharacterBehaviour : MonoBehaviour
     public static bool HasAxe;
 
     bool isChangingChannel;
-    IRemoteControlable target;
+    public IRemoteControlable Target { get; private set; }
     public bool hasItem;
     internal bool HasRemoteController;
 
@@ -96,7 +96,7 @@ public class CharacterBehaviour : MonoBehaviour
 
         var isDone = false;
         if (channel > 0)
-            isDone = target.ChangeChannel(channel);
+            isDone = Target.ChangeChannel(channel);
         else
             isDone = true;
 
@@ -209,12 +209,12 @@ public class CharacterBehaviour : MonoBehaviour
             return;
 
         Debug.Log("HIT " + hit.collider.name);
-        target = hit.collider.GetComponent<IRemoteControlable>();
-        if (target == null)
+        Target = hit.collider.GetComponent<IRemoteControlable>();
+        if (Target == null)
             return;
 
         Debug.Log("object found!");
-        target.PlayerTargetStart();
+        Target.PlayerTargetStart();
         hitpoint = hit.point;
         RemoteControllerUIEffect.instance?.Show();
         ShowInfraredRay();
@@ -225,9 +225,9 @@ public class CharacterBehaviour : MonoBehaviour
     void ClearTarget()
     {
         RemoteControllerUIEffect.instance?.Hide();
-        target.PlayerTargetExit();
+        Target.PlayerTargetExit();
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ray/RayDisEngage", transform.position);
-        target = null;
+        Target = null;
         isChangingChannel = false;
     }
 

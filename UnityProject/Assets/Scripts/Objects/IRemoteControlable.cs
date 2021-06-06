@@ -1,5 +1,5 @@
 ﻿
-interface IRemoteControlable
+public interface IRemoteControlable
 {
     void PlayerTargetStart();
     void PlayerTargetExit();
