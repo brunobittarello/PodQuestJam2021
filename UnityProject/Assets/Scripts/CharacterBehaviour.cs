@@ -56,11 +56,7 @@ public class CharacterBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Home))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-        if (Input.GetKeyDown(KeyCode.End))
-            HasAxe = !HasAxe;
+        CheckCheatsInputs();//TODO commment
 
         if (isIntro)
         {
@@ -71,6 +67,21 @@ public class CharacterBehaviour : MonoBehaviour
             ChangeChannel();
         else
             ReadInputs();
+    }
+
+    void CheckCheatsInputs()
+    {
+        if (Input.GetKeyDown(KeyCode.Home))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        if (Input.GetKeyDown(KeyCode.End))
+            HasAxe = !HasAxe;
+
+        if (Input.GetKeyDown(KeyCode.PageDown))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
+        if (Input.GetKeyDown(KeyCode.PageUp))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     void UpdateIntro()
@@ -115,7 +126,7 @@ public class CharacterBehaviour : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha7) || Input.GetKeyDown(KeyCode.Keypad7)) return 7;
         if (Input.GetKeyDown(KeyCode.Alpha8) || Input.GetKeyDown(KeyCode.Keypad8)) return 8;
         if (Input.GetKeyDown(KeyCode.Alpha9) || Input.GetKeyDown(KeyCode.Keypad9)) return 9;
-        if (Input.GetKeyDown(KeyCode.Alpha0) || Input.GetKeyDown(KeyCode.Keypad0)) return -1;
+        if (Input.GetKeyDown(KeyCode.Alpha0) || Input.GetKeyDown(KeyCode.Keypad0) || Input.GetKeyDown(KeyCode.Backspace) || Input.GetKeyDown(KeyCode.Escape)) return -1;
         return 0;
     }
 
