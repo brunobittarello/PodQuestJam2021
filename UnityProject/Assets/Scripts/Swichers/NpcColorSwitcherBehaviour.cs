@@ -26,11 +26,11 @@ public class NpcColorSwitcherBehaviour : MonoBehaviour, IRemoteControlable
     public bool ChangeChannel(int channel)
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ray/RayStatic", transform.position);
-        if (channel != 0)
-        {
-            Channel = channel;
-            m_SpriteRenderer.color = RemoteControllerUIEffect.ColorByChannel(channel);
-        }
-        return true;
+        if (channel < 1)
+            return true;
+
+        Channel = channel;
+        m_SpriteRenderer.color = RemoteControllerUIEffect.ColorByChannel(channel);
+        return false;
     }
 }
