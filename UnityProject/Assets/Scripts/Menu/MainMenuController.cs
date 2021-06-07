@@ -1,9 +1,6 @@
-﻿
-using System;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
-class MainMenuController : MonoBehaviour
+class MainMenuController : SceneLoader
 {
     [SerializeField]
     Animator animator;
@@ -15,11 +12,12 @@ class MainMenuController : MonoBehaviour
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("IntroSpace", 1);
             animator.SetTrigger("trigContinue");
         }
+
+        TryLoadScene();
     }
 
     void OnAnimationEnds()
     {
-        SceneManager.LoadScene("Room.1");
-        //Camera.main.enabled = false;
+        LoadSceneAsync("Room.1");
     }
 }
