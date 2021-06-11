@@ -16,13 +16,18 @@ abstract class SceneLoader : MonoBehaviour
     protected void LoadSceneAsync(int index)
     {
         sceneAsyncOp = SceneManager.LoadSceneAsync(index);
-        sceneAsyncOp.allowSceneActivation = false;
-        SceneTransition.StartFadeOut(OnFadeOutEnds);
+        OnSceneStartLoading();
     }
 
     protected void LoadSceneAsync(string name)
     {
         sceneAsyncOp = SceneManager.LoadSceneAsync(name);
+        OnSceneStartLoading();
+    }
+
+    void OnSceneStartLoading()
+    {
+        CharacterBehaviour.instance.IsMoveEnabled = false;
         sceneAsyncOp.allowSceneActivation = false;
         SceneTransition.StartFadeOut(OnFadeOutEnds);
     }

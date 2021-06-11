@@ -8,16 +8,19 @@ public class ObjectSwitcherTutorialBehaviour : ObjectSwitcherBehaviour
     public ParticleSystem funfair;
     public bool playMusic;
 
-    public override bool ChangeChannel(int channel)
+    public override bool ChangeChannel(int channel, out bool disconnect)
     {
+        disconnect = true;
         if (isRight) return true;
-        base.ChangeChannel(channel);
 
-        isRight = channel == correctChannel;
+        if (!base.ChangeChannel(channel, out disconnect))
+            return false;
+
+        isRight = disconnect = channel == correctChannel;
 
         if (isRight)
             collider2d.enabled = false;            
-        return isRight;
+        return true;
     }
 
     protected override void LoadChannel()

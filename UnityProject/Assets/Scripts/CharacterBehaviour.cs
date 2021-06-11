@@ -6,7 +6,8 @@ public class CharacterBehaviour : MonoBehaviour
     const float SPEED = 2.5f;
     const float ANIMATION_SPEED = 0.07f;
     const int WALKING_NUM_SPRITES = 8;
-    internal const float INTRO_TIME = 0.5f;
+    const float TRANSITION_TIME = 1f;
+    internal const float INTRO_TIME = TRANSITION_TIME + 0.5f;
 
     public static CharacterBehaviour instance;
     public static bool HasAxe;
@@ -30,12 +31,14 @@ public class CharacterBehaviour : MonoBehaviour
     Vector3 hitpoint;
     float timer;
     bool isIntro;
+    public bool IsMoveEnabled { get; set; }
 
     // Start is called before the first frame update
     private void Awake()
     {
         instance = this;        
         HasRemoteController = true;
+        IsMoveEnabled = false;
     }
 
     protected virtual void Start()
@@ -87,10 +90,13 @@ public class CharacterBehaviour : MonoBehaviour
     void UpdateIntro()
     {
         timer += Time.deltaTime;
+        if (timer < TRANSITION_TIME) return;
+
         Move(Vector2Int.up);
         if (timer > INTRO_TIME)
         {
             isIntro = false;
+            IsMoveEnabled = true;
             collider2d.enabled = true;
         }
     }
@@ -102,16 +108,15 @@ public class CharacterBehaviour : MonoBehaviour
         if (channel == 0)
             return;
 
+        bool disconnect;
+        if (channel < 0)
+            disconnect = true;
+        else if (!Target.ChangeChannel(channel, out disconnect))
+            return;
+
         ShowInfraredRay();
         RemoteControllerUIEffect.instance?.ControllerButtonPressed(channel);
-
-        var isDone = false;
-        if (channel > 0)
-            isDone = Target.ChangeChannel(channel);
-        else
-            isDone = true;
-
-        if (isDone)
+        if (disconnect)
             ClearTarget();
     }
 
@@ -150,6 +155,8 @@ public class CharacterBehaviour : MonoBehaviour
 
     void Move(Vector2Int deltaMovement)
     {
+        if (!isIntro && !IsMoveEnabled) return;
+
         this.transform.position = this.transform.position + (Vector3)(Vector2)deltaMovement * Time.deltaTime * SPEED;
         Animate(deltaMovement);
         lastMovement = deltaMovement;
