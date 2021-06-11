@@ -28,12 +28,14 @@ public class DoorWithMusicalCodeBehaviour : BaseObjectBehaviour, IRemoteControla
         return isOpened;
     }
 
-    public bool ChangeChannel(int channel)
+    public bool ChangeChannel(int channel, out bool disconnect)
     {
+        disconnect = false;
         if (channel == 0)
-            return true;
-        ReceiveInput(channel);
-        return false;
+            disconnect = true;
+        else
+            ReceiveInput(channel);
+        return true;
     }
 
     bool ReceiveInput(int channel)

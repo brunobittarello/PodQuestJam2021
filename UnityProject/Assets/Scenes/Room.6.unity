@@ -236,7 +236,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1039521762355015232, guid: 6cefd275db9f6b54faf779458cb56bcb, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1039521762355015232, guid: 6cefd275db9f6b54faf779458cb56bcb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -293,7 +293,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2786672490865797338, guid: e6f17d80972ddb543b21f0ed8ce4b729, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2786672490865797338, guid: e6f17d80972ddb543b21f0ed8ce4b729, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1256,10 +1256,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1313868609661878128, guid: c334049395bfafa4f8f61c382f853a34, type: 3}
-      propertyPath: openDoorSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 7daa2c7194ef25644b55f664ed780df6, type: 3}
-    - target: {fileID: 1313868609661878128, guid: c334049395bfafa4f8f61c382f853a34, type: 3}
       propertyPath: triggers.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1277,7 +1273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2158966181761910317, guid: c334049395bfafa4f8f61c382f853a34, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2158966181761910317, guid: c334049395bfafa4f8f61c382f853a34, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1318,10 +1314,6 @@ PrefabInstance:
     - target: {fileID: 2158966181761910317, guid: c334049395bfafa4f8f61c382f853a34, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3524112867710010261, guid: c334049395bfafa4f8f61c382f853a34, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c334049395bfafa4f8f61c382f853a34, type: 3}

@@ -13,7 +13,8 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
     protected Collider2D collider2d;
 
     internal BaseObjectBehaviour current;
-    public int CurrentChannel { get; private set;}
+    [SerializeField]
+    public int CurrentChannel;
     float timer;
     bool enableProxy;
 
@@ -61,12 +62,13 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
            collider2d.enabled = !door.IsOpened();
     }
 
-    public virtual bool ChangeChannel(int channel)
+    public virtual bool ChangeChannel(int channel, out bool disconnect)
     {
-        if (timer > 0) return false;
-
+        disconnect = false;
         if (enableProxy && current is IRemoteControlable remoteControlable)
-            return remoteControlable.ChangeChannel(channel);
+            return remoteControlable.ChangeChannel(channel, out disconnect);
+
+        if (timer > 0) return false;
 
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ray/RayStatic", transform.position);
         CurrentChannel = channel;
@@ -75,7 +77,7 @@ public class ObjectSwitcherBehaviour : MonoBehaviour, IRemoteControlable
         if (current != null)
             Destroy(current.gameObject);
 
-        return false;
+        return true;
     }
 
     protected virtual void LoadChannel()

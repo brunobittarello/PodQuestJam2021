@@ -1,9 +1,18 @@
-﻿using UnityEngine;
+﻿using FMOD.Studio;
+using UnityEngine;
 
 class MainMenuController : SceneLoader
 {
     [SerializeField]
     Animator animator;
+
+    Bus master;
+
+    private void Start()
+    {
+        master = FMODUnity.RuntimeManager.GetBus("bus:/");
+        master.setVolume(0.3f);
+    }
 
     void Update()
     {
@@ -14,6 +23,8 @@ class MainMenuController : SceneLoader
         }
 
         TryLoadScene();
+        if (IsGoing)
+            master.setVolume(1);
     }
 
     void OnAnimationEnds()
