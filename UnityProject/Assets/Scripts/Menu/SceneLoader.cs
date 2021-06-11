@@ -6,6 +6,7 @@ abstract class SceneLoader : MonoBehaviour
 {
     AsyncOperation sceneAsyncOp;
     bool isFadeoutEnded;
+    protected bool IsGoing { get { return sceneAsyncOp?.allowSceneActivation ?? false; } }
 
     protected void TryLoadScene()
     {
@@ -27,7 +28,8 @@ abstract class SceneLoader : MonoBehaviour
 
     void OnSceneStartLoading()
     {
-        CharacterBehaviour.instance.IsMoveEnabled = false;
+        if (CharacterBehaviour.instance != null)
+            CharacterBehaviour.instance.IsMoveEnabled = false;
         sceneAsyncOp.allowSceneActivation = false;
         SceneTransition.StartFadeOut(OnFadeOutEnds);
     }

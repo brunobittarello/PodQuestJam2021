@@ -1,8 +1,11 @@
 using UnityEngine;
 using System.Collections;
+using FMOD.Studio;
 
 public class ObjectSwitcherTutorialBehaviour : ObjectSwitcherBehaviour
 {
+    internal static EventInstance? gameplayTrack;
+
     public int correctChannel;
     public bool isRight;
     public ParticleSystem funfair;
@@ -30,9 +33,9 @@ public class ObjectSwitcherTutorialBehaviour : ObjectSwitcherBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ray/RayFunfair", transform.position);
             funfair.Play();
-            if (playMusic) { 
-                var fmodInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Gameplay");
-                fmodInstance.start();
+            if (playMusic) {
+                gameplayTrack = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Gameplay");
+                gameplayTrack.Value.start();                
             }
         }
     }
